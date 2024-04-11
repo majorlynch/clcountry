@@ -1,0 +1,81 @@
+
+ <div class="container">
+    <div>
+    <mat-form-field>
+      <mat-select   [(ngModel)]="selectedCountry" (selectionChange)="onCountryChange($event.value)">
+        <mat-option *ngFor="let country of countries" [value]="country">
+          {{ country }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-divider></mat-divider>
+  <div>
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="name"
+        [(ngModel)]="country.name"
+        id="name"
+        name="country.name"
+      />
+    </mat-form-field>
+    <div>
+      <div>
+        <mat-form-field class="example-form">
+          <mat-label>Capital</mat-label>
+          <input
+            matInput
+            placeholder="capital"
+            [(ngModel)]="country.capital"
+            id="name"
+            name="country.capital"
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field class="example-form">
+        <mat-label>Official Name</mat-label>
+        <input
+          matInput
+          placeholder="officialName"
+          [(ngModel)]="country.officialName"
+          id="name"
+          name="country.officialName"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field class="example-form">
+        <mat-label>Region</mat-label>
+        <input
+          matInput
+          placeholder="region"
+          [(ngModel)]="country.region"
+          id="name"
+          name="country.officialName"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <div>
+    <div>
+      <mat-form-field class="example-form">
+        <mat-label>Sub Region</mat-label>
+        <input
+          matInput
+          placeholder="subregion"
+          [(ngModel)]="country.subregion"
+          id="name"
+          name="country.subregion"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</div>
